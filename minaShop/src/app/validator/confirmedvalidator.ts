@@ -1,5 +1,4 @@
 import { FormGroup } from '@angular/forms';
-    //this validator was created for the password confirm.
 
 export function ConfirmedValidator(
   controlName: string,

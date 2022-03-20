@@ -9,10 +9,12 @@ import { ShopComponent } from './shop/shop.component';
 import { OrdersComponent } from './orders/orders.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { GuardGuard } from './guard/auth.guard';
 
 const routes: Routes = [
 //  { path:'', component:HomeComponent },
   {path:'', redirectTo:'products',pathMatch:'full'},
+  // {path:"products",component:ProductComponent, canActivate:[GuardGuard]},
   { path:'product-single', component:ProductsingleComponent },
   {path:'products',component:ProductComponent},
   { path:'cart', component:CartComponent },

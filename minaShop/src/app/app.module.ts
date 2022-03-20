@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductComponent } from './product/product.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FilterPipe } from './shared/filter.pipe';
     LoginComponent,
     SignupComponent,
     ProductComponent,
-    FilterPipe
+    FilterPipe,
+    SplashComponent
   ],
   imports: [
     BrowserModule,
