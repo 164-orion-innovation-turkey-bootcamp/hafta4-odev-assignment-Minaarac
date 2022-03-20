@@ -1,0 +1,108 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 5px;"
+                    src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50"
+                    alt="">
+                <h6>Jewllery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<section class="section products-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="title text-center">
+                    <h2>New arrivals</h2>
+                    <p>The best Online sales to shop these weekend</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+                    <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
+                            <div class="card col-md-3">
+                                <a>
+                                    <img src="{{item.image}}" alt=""/>
+                                </a>
+                            </div>
+                            <span class="onsale">Sale</span>
+                            <div class="product-hover-overlay">
+                                <button class="tf-ion-android-cart"></button>
+                            </div>
+                            <div class="product-info">
+                                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;" class="product-title h5 mb-0">{{item.title}}</h5>
+                                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                                <p><strong>Price:</strong> ${{item.price}}</p>
+                                <button type="button" class="btn btn-danger btn-sm" (click)=addtocart(item)>Add to cart</button>
+                            </div>
+                        </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /portfolio -->
+<section class="features border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="feature-block">
+                    <i class="tf-ion-android-bicycle"></i>
+                    <div class="content">
+                        <h5>Free Shipping</h5>
+                        <p>On all order over $39.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="feature-block">
+                    <i class="tf-wallet"></i>
+                    <div class="content">
+                        <h5>30 Days Return</h5>
+                        <p>Money back Guarantee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="feature-block">
+                    <i class="tf-key"></i>
+                    <div class="content">
+                        <h5>Secure Checkout</h5>
+                        <p>100% Protected by paypal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="feature-block">
+                    <i class="tf-clock"></i>
+                    <div class="content">
+                        <h5>24/7 Support</h5>
+                        <p>All time customer support </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

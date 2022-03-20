@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Mina",
+      "surname": "Araç",
+      "email": "mina123@gmail.com",
+      "password": "Mina123*"
+    },
+    {
+      "id": 2,
+      "name": "Demo",
+      "surname": "Demo2",
+      "email": "demo123@gmail.com",
+      "password": 123456
+    }
+  ],
+  "signupUsers": [
+    {
+      "name": "Demo",
+      "surname": "Demo2",
+      "email": "demo123@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "Test",
+      "surname": "Test1",
+      "email": "test@test.com",
+      "password": "Test123456*",
+      "id": 3
+    }
+  ]
+}

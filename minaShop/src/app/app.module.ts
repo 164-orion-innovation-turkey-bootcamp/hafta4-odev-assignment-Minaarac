@@ -16,6 +16,8 @@ import { ShopComponent } from './shop/shop.component';
 import { OrdersComponent } from './orders/orders.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProductComponent } from './product/product.component';
+import { FilterPipe } from './shared/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SignupComponent } from './signup/signup.component';
     ShopComponent,
     OrdersComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProductComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

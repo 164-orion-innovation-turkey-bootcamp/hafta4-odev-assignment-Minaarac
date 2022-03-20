@@ -1,26 +1,42 @@
 <div class="account section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="login-form border p-5">
-            <div class="text-center heading">
-              <h2 class="mb-2">Login</h2>
-              <p class="lead">Don’t have an account? <a href="#">Create a free account</a></p>
-            </div>
-            <form action="#">
-              <div class="form-group mb-4">
-                <label for="#">Enter username</label>
-                <input type="text" class="form-control" placeholder="Enter Username">
-              </div>
-              <div class="form-group">
-                <label for="#">Enter Password</label>
-                <a class="float-right" href="">Forget password?</a>
-                <input type="text" class="form-control" placeholder="Enter Password"> 
-              </div>
-              <a href="#" class="btn btn-main mt-3 btn-block">Login</a>
-            </form>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="login-form border p-5">
+          <div class="text-center heading">
+            <h2 class="mb-2">Login</h2>
+            <p class="lead">Don’t have an account? <a href="#">Create a free account</a></p>
           </div>
+          <form [formGroup]="loginForm" #f="ngForm" (submit)="login()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" id="email"
+                formControlName="email">
+              <small class="text-danger "
+                *ngIf="loginForm.get('email') && !loginForm.get('email')!.valid && loginForm.get('email')!.touched"><em>email
+                  is
+                  required!</em></small>
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                id="password" formControlName="password">
+
+              <small class="text-danger "
+                *ngIf="loginForm.get('password') && !loginForm.get('password')!.valid && loginForm.get('password')!.touched"><em>password
+                  is
+                  required!</em></small>
+            </div>
+            <hr>
+            <br>
+
+            <button type="submit" [disabled]="!loginForm.valid" class="btn btndark">Submit</button>
+          </form>
+          <a routerLink="../signup">Create New User?</a>
+
         </div>
       </div>
     </div>
   </div>
+</div>

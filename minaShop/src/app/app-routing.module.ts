@@ -1,3 +1,4 @@
+import { ProductComponent } from './product/product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsingleComponent } from './productsingle/productsingle.component';
@@ -10,14 +11,16 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  { path:"", component:HomeComponent },
-  { path:"product-single", component:ProductsingleComponent },
-  { path:"cart", component:CartComponent },
-  { path:"checkout", component:CheckoutComponent },
-  { path:"shop", component:ShopComponent },
-  { path:"order", component:OrdersComponent },
-  { path:"login", component:LoginComponent },
-  { path:"signup", component:SignupComponent },
+//  { path:'', component:HomeComponent },
+  {path:'', redirectTo:'products',pathMatch:'full'},
+  { path:'product-single', component:ProductsingleComponent },
+  {path:'products',component:ProductComponent},
+  { path:'cart', component:CartComponent },
+  { path:'checkout', component:CheckoutComponent },
+  { path:'shop', component:ShopComponent },
+  { path:'order', component:OrdersComponent },
+  { path:'login', component:LoginComponent },
+  { path:'signup', component:SignupComponent },
 ];
 
 @NgModule({
